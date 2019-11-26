@@ -1,17 +1,13 @@
 package me.aleax.cuba.samples.mqtt.core;
 
-import com.haulmont.cuba.core.Persistence;
-import com.haulmont.cuba.core.Transaction;
 import com.haulmont.cuba.core.global.DataManager;
 import com.haulmont.cuba.core.global.Metadata;
-import com.haulmont.cuba.core.sys.events.AppContextStartedEvent;
 import com.haulmont.cuba.security.app.Authentication;
 import me.aleax.cuba.samples.mqtt.entity.MqttMsg;
 import org.eclipse.paho.client.mqttv3.MqttConnectOptions;
 import org.slf4j.Logger;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.event.EventListener;
 import org.springframework.integration.config.EnableIntegration;
 import org.springframework.integration.core.MessageSource;
 import org.springframework.integration.dsl.IntegrationFlow;
@@ -19,7 +15,6 @@ import org.springframework.integration.dsl.IntegrationFlows;
 import org.springframework.integration.dsl.Pollers;
 import org.springframework.integration.endpoint.MessageProducerSupport;
 import org.springframework.integration.endpoint.MethodInvokingMessageSource;
-import org.springframework.integration.handler.LoggingHandler;
 import org.springframework.integration.handler.MethodInvokingMessageHandler;
 import org.springframework.integration.mqtt.core.DefaultMqttPahoClientFactory;
 import org.springframework.integration.mqtt.core.MqttPahoClientFactory;
